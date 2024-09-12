@@ -1,11 +1,17 @@
-<div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
+<a
+    href="assets/images/gallery-images/{{ feature.picture }}"
+    data-featherlight="image"
+    class="col-3 wow fadeIn large-link"
+    data-wow-delay="0.1s" 
+    target="_blank">
+    <img src="assets/images/gallery-images/{{ feature.picture }}" alt="Landing Page" class="large-image" />
+</a>
+<div class="icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
 	<!--Icon-->
-	<div class="icon">
-		<i class="fa fa-{{ feature.icon }} fa-2x"></i>
-	</div>
+	
 	<!--Icon Block Description-->
 	<div class="icon-block-description">
 		<h4>{{ feature.title }}</h4>
 		<p>{{ feature.description }}</p>
-	</div>
+		</div>
 </div>

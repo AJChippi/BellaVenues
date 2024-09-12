@@ -3,4 +3,6 @@ export class Feature1 {
 	icon: string;
 	title: string;
 	description: string;
+	buttonLink: string;
+	buttonText: string;
 }

@@ -1,11 +1,26 @@
-<div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
-	<!--Icon-->
-	<div class="icon">
-		<i class="fa fa-{{ feature1.icon }} fa-2x"></i>
-	</div>
-	<!--Icon Block Description-->
-	<div class="icon-block-description">
-		<h4>{{ feature1.title }}</h4>
-		<p>{{ feature1.description }}</p>
-	</div>
-</div>
+
+        <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
+            <!--Icon-->
+            <div class="icon">
+                
+            </div>
+            <!--Icon Block Description-->
+            <div class="icon-block-description1">
+                <h4>{{ feature1.title }}</h4>
+                <a href="assets/images/gallery-images/{{ feature1.icon }}" 
+                   data-featherlight="image"
+                   class="col-3 wow fadeIn smaller-link"
+                   data-wow-delay="0.1s" 
+                   target="_blank">
+                    <img src="assets/images/gallery-images/{{ feature1.icon }}" alt="Landing Page" class="smaller-image" />
+                </a>
+                <p>{{ feature1.description }}</p>
+                <a
+            href="{{ feature1.buttonLink}}"
+            class="button video link-lightbox">
+            {{feature1.buttonText}}
+          </a>
+                
+            </div>
+        </div>
+

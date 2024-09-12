@@ -266,7 +266,7 @@ section {
 }
 
 .col-2 {
-  width: 50%;
+  width: 100%;
 }
 
 .col-3 {
@@ -772,10 +772,12 @@ h4 {
   background-size: cover;
 }
 
+
 #banner-content.row {
   padding-top: 200px;
   padding-left: 25%;
   padding-bottom: 100px;
+
 }
 
 #banner h1 {
@@ -831,6 +833,34 @@ h4 {
 .icon-left .icon-block-description {
   padding-left: 53px;
 }
+.icon-block-description {
+  width: 80%;            /* Take up full width of the parent container */
+  max-width: 100%;       /* Set a maximum width for better readability, adjust as needed */
+  margin: 0 auto;         /* Center it horizontally if there's space */
+  padding: 10px;          /* Add some padding for spacing */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+.icon-block-description p {
+  font-size: 1.2em;       /* Optional: Increase font size for better readability */
+  font-family: "Lora", serif;
+
+}
+
+
+.icon-block-description1 {
+  width: 80%;            /* Take up full width of the parent container */
+  max-width: 100%;       /* Set a maximum width for better readability, adjust as needed */
+  margin-top: 10px; 
+  padding: 10px;          /* Add some padding for spacing */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+.icon-block-description1 p {
+  font-size: 1.3em;       /* Optional: Increase font size for better readability */
+  font-family: "Noto Serif", serif;
+
+}
 
 /* Icon Right */
 
@@ -860,6 +890,36 @@ h4 {
 /* --------- 5.2 Parallax Elements ---------- */
 
 /* --------- 5.3 Divider ---------- */
+.large-link {
+  display: block;      /* Make sure the link takes up space */
+  width: 100%;         /* Full width of its container */
+  max-width: 350px;    /* Adjust this to your desired maximum width */
+  height: auto;        /* Maintain aspect ratio */
+  overflow: hidden;    /* Hide overflow if needed */
+}
+
+.large-link img {
+  width: 100%;
+  padding-left: 25%;         /* Make image scale with the link */
+  height: auto;        /* Maintain aspect ratio */
+}
+
+.smaller-link {
+  display: inline-block;
+  width: 50%;           /* Adjust width as needed */
+  max-width: 350px;      /* Adjust this to your desired maximum width */
+  height: auto;          /* Maintain aspect ratio */
+  overflow: hidden;      /* Hide overflow if needed */
+  text-align: left;      /* Align the image and content to the left */
+}
+
+.smaller-link img {
+  width: 80%;            /* Make image scale with the link */
+  height: auto;          /* Maintain aspect ratio */
+  display: block;        /* Ensure the image takes up the left-aligned space */
+  margin-left: 0;        /* Ensure no margin pushes it to the right */
+}
+
 
 .divider {
   position: relative;
@@ -938,7 +998,7 @@ blockquote {
 /* --------- 6.4 Gallery ---------- */
 
 #gallery img {
-  max-height: 300px;
+  max-height: 500px;
 }
 
 #gallery [class*="col-"] {
@@ -976,6 +1036,7 @@ blockquote {
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  padding: 10px;
   /* vertical-align: middle; */
 }
 
@@ -1209,6 +1270,9 @@ blockquote {
 /*------------------------------------------------------------------------------------------*/
 /* 7. Footer */
 /*------------------------------------------------------------------------------------------*/
+.footer-top-border {
+  border-top: 2px solid #000; /* Adjust color and thickness as needed */
+}
 
 #landing-footer {
   clear: both;
@@ -1903,6 +1967,43 @@ blockquote {
     padding-top: 85px !important;
   }
 
+  .feature-wrapper {
+    height: 100vh;                /* Full height of the viewport */
+    display: flex;
+    justify-content: center;       /* Center horizontally */
+    align-items: center;           /* Center vertically */
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;       /* Center horizontally */
+    align-items: center;           /* Center vertically */
+    width: 100%;                   /* Full width of the container */
+    height: 100%;                  /* Full height of the container */
+}
+
+.app-feature-block {
+    max-width: 500px;              /* Limit width of feature block */
+    width: 100%;                   /* Allow full width if needed */
+}
+
+
+
+
+  .feature-block-container {
+    display: flex;            /* Use flexbox for centering */
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    height: 100vh;             /* Ensure it takes up the full viewport height */
+}
+
+.icon-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Center the content inside the feature block */
+}
+
+
   /*-----------------Sections-----------------*/
 
   /* Call to Action*/
@@ -2127,6 +2228,30 @@ a:hover,
   color: #d2b356;
 }
 
+.icon-block {
+  display: flex;
+  flex-direction: column;  /* Stack icon and description vertically */
+  align-items: center;     /* Center the items horizontally */
+  text-align: center;      /* Center the text in the description */
+  padding-right: 100px;
+  padding-left: 100px;
+  margin: 0 auto;          /* Ensure it's centered in its container */
+}
+
+.icon img {
+  display: inline-block;
+  width: 50%;           /* Adjust width as needed */
+  max-width: 350px;      /* Adjust this to your desired maximum width */
+  height: auto;          /* Maintain aspect ratio */
+  overflow: hidden;      /* Hide overflow if needed */
+  text-align: left; 
+}
+
+.icon-block-description1 {
+  max-width: 100%;        /* Limit the width of the text block */
+  margin-top: 10px;
+}
+
 /* Border Color */
 
 #banner .section-heading:before,
@@ -2250,15 +2375,14 @@ body {
 /* Banner Typography */
 
 #banner h1 {
-  font-family: "Lucida Handwriting", cursive, Arial, Helvetica;
-  font-size: 70px;
+  font-family: "Playwrite CU", cursive;  font-size: 70px;
   line-height: 60px;
   font-weight: 800;
   color: white;
 }
 
 #banner h2 {
-  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-family: "Playwrite CU", cursive;
   font-size: 25px;
   font: bold;
   font-weight: 300;
@@ -2297,29 +2421,25 @@ body {
 /* Standard Headings h1-h6 */
 
 h1 {
-  font-family: "Open Sans", sans-serif, Arial, Helvetica;
-  font-size: 40px;
+  font-family: "Playwrite CU", cursive;  font-size: 40px;
   font-weight: 300;
   color: white;
 }
 
 h2 {
-  font-family: "Open Sans", sans-serif, Arial, Helvetica;
-  font-size: 34px;
+  font-family: "Playwrite CU", cursive;  font-size: 34px;
   font-weight: 300;
   color: white;
 }
 
 h3 {
-  font-family: "Open Sans", sans-serif, Arial, Helvetica;
-  font-size: 30px;
+  font-family: "Playwrite CU", cursive;  font-size: 30px;
   font-weight: 700;
   color: #111;
 }
 
 h4 {
-  font-family: "Open Sans", sans-serif, Arial, Helvetica;
-  font-size: 18px;
+  font-family: "Playwrite CU", cursive;  font-size: 45px;
   font-weight: 400;
   color: #111;
 }

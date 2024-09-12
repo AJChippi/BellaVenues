@@ -3,7 +3,7 @@
 	<div>
 		<header
 			id="banner"
-			class="scrollto clearfix shift-left"
+			class="scrollto clearfix"
 			data-enllax-ratio=".5"
 			[style.background]="
 				'url(../assets/images/banner-images/' +
@@ -19,16 +19,20 @@
 					
 				</div>
 			</div>
-			@if (features1$) {
-				<div class="col-2-3">
-					@for (feature1 of features1$ | async; track feature1; let i = $index) {
-						<div>
-							<app-feature-block [feature1]="feature1"></app-feature-block>
-						</div>
-					}
-				</div>
-			}
+			
 		</header>
 	</div>
+}
+
+@if (features1$) {
+
+	@for (feature1 of features1$ | async; track feature1; let i = $index) {
+		<div class="feature-wrapper">
+			<div class="feature-container">
+				<app-feature-block [feature1]="feature1"></app-feature-block>
+			</div>
+		</div>
+	}
+
 }
 

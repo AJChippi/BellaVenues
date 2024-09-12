@@ -1,6 +1,6 @@
 export class Feature {
 	id: number;
-	icon: string;
+	picture: string;
 	title: string;
 	description: string;
 }
