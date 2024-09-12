@@ -1,0 +1,34 @@
+
+@if (header$ | async; as header) {
+	<div>
+		<header
+			id="banner"
+			class="scrollto clearfix shift-left"
+			data-enllax-ratio=".5"
+			[style.background]="
+				'url(../assets/images/banner-images/' +
+				header.image +
+				' ) no-repeat center top;'
+			">
+			<div id="banner-content" class="row clearfix ">
+				<div class="col-30">
+					<div class="section-heading">
+						<h1>{{ header.tagline }}</h1>
+						<h2>{{ header.title }}</h2>
+					</div>
+					
+				</div>
+			</div>
+			@if (features1$) {
+				<div class="col-2-3">
+					@for (feature1 of features1$ | async; track feature1; let i = $index) {
+						<div>
+							<app-feature-block [feature1]="feature1"></app-feature-block>
+						</div>
+					}
+				</div>
+			}
+		</header>
+	</div>
+}
+
